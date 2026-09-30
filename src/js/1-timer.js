@@ -19,6 +19,7 @@ const timerUpdate = dateToCalculate => {
 
   if (diff <= 0) {
     stopAndClear();
+    document.body.classList.add('flashing-bg');
     return;
   }
 
@@ -45,6 +46,7 @@ const enableStartButton = isEnable => {
 };
 
 const stopAndClear = () => {
+  document.body.classList.remove('flashing-bg');
   enableStartButton(false);
   clearInterval(intervalId);
   intervalId = -1;
@@ -57,8 +59,8 @@ const options = {
   defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
+    stopAndClear();
     if (!selectedDates || selectedDates.length === 0) {
-      stopAndClear();
       return;
     }
     console.log(selectedDates[0]);
@@ -68,7 +70,6 @@ const options = {
         title: 'Error',
         message: 'Please choose a date in the future',
       });
-      stopAndClear();
       return;
     }
 
