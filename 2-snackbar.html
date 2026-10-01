@@ -5,15 +5,25 @@
     <link rel="icon" type="image/svg+xml" href="/goit-advancedjs-hw-02/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>goit-advancedjs-hw-02</title>
-    <script type="module" crossorigin src="/goit-advancedjs-hw-02/assets/styles-C42-MIdo.js"></script>
-    <link rel="stylesheet" crossorigin href="/goit-advancedjs-hw-02/assets/styles-BsRkvuKV.css">
+    <script type="module" crossorigin src="/goit-advancedjs-hw-02/2-snackbar.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-advancedjs-hw-02/assets/styles-ribbissq.js">
+    <link rel="modulepreload" crossorigin href="/goit-advancedjs-hw-02/assets/vendor-BbbuE1sJ.js">
+    <link rel="stylesheet" crossorigin href="/goit-advancedjs-hw-02/assets/styles-DNDnNgE0.css">
+    <link rel="stylesheet" crossorigin href="/goit-advancedjs-hw-02/assets/vendor-CZjNVMTf.css">
   </head>
   <body>
     <div class="container">
       <form class="form">
         <label>
           Delay (ms)
-          <input type="number" name="delay" required />
+          <input
+            type="number"
+            name="delay"
+            required
+            style="display: block"
+            step="50"
+            min="0"
+          />
         </label>
 
         <fieldset>
@@ -28,7 +38,7 @@
           </label>
         </fieldset>
 
-        <button type="submit">Create notification</button>
+        <button id="submit-btn" type="submit">Create notification</button>
       </form>
     </div>
   </body>
